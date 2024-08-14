@@ -6,7 +6,7 @@ const About = () => {
         <h2 className='text-gray-700'>Katalog
           <p>mebel</p>
           fwounkjcdm,s
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas corrupti architecto vel dignissimos non mollitia odio quos eius voluptates fuga modi nisi repudiandae sint assumenda incidunt quae, obcaecati eveniet exercitationem! Quibusdam vel reprehenderit ab placeat id, praesentium pariatur dolorum labore veritatis error iste, similique sint reiciendis tempore distinctio doloremque nisi?</p>
+          <p>lorem50</p>
         </h2>
     </>
   )
