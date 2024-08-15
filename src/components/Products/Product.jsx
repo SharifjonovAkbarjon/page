@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import cart from '../../assets/cart.png'
+import { Link } from 'react-router-dom'
 
 const API_URL = "https://dummyjson.com"
 
@@ -56,7 +57,9 @@ const Product = () => {
     console.log(products);
     const productItem = products?.map((product) => (
         <div key={product.id} className='hover:cursor-pointer  group relative overflow-hidden md:w-[48%] lg:w-[23%] mt-7 p-4 border-zinc-200	 flex flex-col items-center'>
-            <img src={product.images[0]} className='w-full h-[300px] object-contain' alt="" />
+            <Link to={`/product/${product.id}`}>
+                <img src={product.images[0]} className='w-full h-[300px] object-contain' alt="" />
+            </Link>
             <p className='text-red-500 font-[500]'>{product.discountPercentage} %</p>
             <h5 className='line-clamp-1 w-[48%] text-center'>{product.description}</h5>
             <h3 className='text-[21px] font-[500] text-center'>{product.title}</h3>
@@ -66,7 +69,10 @@ const Product = () => {
                 <div className='flex gap-[15px] '>
                     <button disabled={offset <= 1} onClick={() => setOffset(p => p - 1)} className='bg-[rgb(245,245,245)] p-[12px] py-[3px]'>-</button>
                     <p>{offset}</p>
-                    <button onClick={handleClick} className='bg-[rgb(245,245,245)] p-[12px] py-[3px]'>+</button>
+                    <button
+                        onClick={handleClick} className='bg-[rgb(245,245,245)] p-[12px] py-[3px]'>+
+                        
+                    </button>
                 </div>
                 <div className='flex'>
                     <img src={cart} alt="" />

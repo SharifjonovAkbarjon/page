@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect} from 'react'
 import rasm1 from '../../assets/1.png'
 import rasm2 from '../../assets/2.png'
 import rasm3 from '../../assets/3.png'
@@ -100,6 +100,7 @@ const data = [
 
 
 
+
 const laylo = data?.map((el) => (
   <div key={el.id} className="hover:delay-150	 hover:shadow-lg   cursor-pointer  w-[23%]  flex gap-[40px] py-3 flex-col ">
     <div className=''>
@@ -117,6 +118,11 @@ const laylo = data?.map((el) => (
 
 
 const About = () => {
+
+  useEffect(()=>{
+    window.scrollTo(0, 0)
+}, [])
+
   return (
     <>
       <div className='container'>
